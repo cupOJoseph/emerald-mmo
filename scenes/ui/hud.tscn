@@ -9,14 +9,16 @@ script = ExtResource("1_script")
 offset_left = 4
 offset_top = 4
 offset_right = 150
-offset_bottom = 20
+offset_bottom = 16
+add_theme_font_size_override = 7
 text = "Starting Town"
 
 [node name="PlayerLabel" type="Label" parent="."]
 offset_left = 4
-offset_top = 20
+offset_top = 16
 offset_right = 150
-offset_bottom = 36
+offset_bottom = 28
+add_theme_font_size_override = 7
 text = "Player"
 
 [node name="ChatContainer" type="VBoxContainer" parent="."]
@@ -38,15 +40,38 @@ placeholder_text = "Type a message..."
 
 [node name="GoldDisplay" type="Label" parent="."]
 offset_left = 4
-offset_top = 36
-offset_right = 150
-offset_bottom = 52
+offset_top = 28
+offset_right = 100
+offset_bottom = 38
+add_theme_font_size_override = 7
 text = "Gold: 100"
 
-[node name="HotkeyHints" type="Label" parent="."]
-offset_left = 4
-offset_top = 52
-offset_right = 200
-offset_bottom = 68
-text = "[I]nventory [B]ank [T]rade [F1]Admin"
+[node name="HintsLabel" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100
+offset_top = -12
+offset_right = 100
+offset_bottom = 0
+horizontal_alignment = 1
+add_theme_font_size_override = 6
+text = "M-Menu | I-Items | Enter-Chat"
 modulate = Color(1, 1, 1, 0.5)
+
+[node name="ContextHint" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40
+offset_top = -22
+offset_right = 40
+offset_bottom = -12
+horizontal_alignment = 1
+add_theme_font_size_override = 7
+text = ""
+modulate = Color(1, 1, 0.6, 0)

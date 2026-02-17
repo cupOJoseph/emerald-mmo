@@ -6,17 +6,25 @@ extends CanvasLayer
 @onready var chat_input: LineEdit = $ChatContainer/ChatInput
 @onready var chat_log: RichTextLabel = $ChatContainer/ChatLog
 @onready var gold_display: Label = $GoldDisplay
+@onready var hints_label: Label = $HintsLabel
+@onready var context_hint: Label = $ContextHint
 
 var chat_visible: bool = false
 
 func _ready() -> void:
+	add_to_group("hud")
 	chat_container.visible = false
 	chat_input.visible = false
-	map_label.text = "Starting Town"
+	var map_name: String = GameManager.map_names.get(GameManager.current_map_id, "Unknown")
+	map_label.text = map_name
 	player_label.text = GameManager.player_username
+	context_hint.text = ""
+	context_hint.modulate.a = 0.0
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("chat"):
+		if GameManager.is_input_blocked():
+			return
 		if not chat_visible:
 			chat_visible = true
 			chat_container.visible = true
@@ -46,3 +54,14 @@ func set_map_name(map_name: String) -> void:
 
 func set_gold(amount: int) -> void:
 	gold_display.text = "Gold: %d" % amount
+
+func set_context_hint(hint: String) -> void:
+	if hint == "":
+		if context_hint.modulate.a > 0:
+			var tw := create_tween()
+			tw.tween_property(context_hint, "modulate:a", 0.0, 0.2)
+	else:
+		context_hint.text = hint
+		if context_hint.modulate.a < 1:
+			var tw := create_tween()
+			tw.tween_property(context_hint, "modulate:a", 1.0, 0.2)

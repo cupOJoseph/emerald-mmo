@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmainscene0001"]
+[gd_scene load_steps=6 format=3 uid="uid://cmainscene0001"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_script"]
-[ext_resource type="PackedScene" path="res://scenes/world/town_start.tscn" id="2_town"]
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="3_player"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dialog_box.tscn" id="5_dialog"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game_menu.tscn" id="6_menu"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_script")
-
-[node name="TownStart" parent="." instance=ExtResource("2_town")]
 
 [node name="Player" parent="." instance=ExtResource("3_player")]
 position = Vector2(160, 112)
 
 [node name="HUD" parent="." instance=ExtResource("4_hud")]
+
+[node name="DialogBox" parent="." instance=ExtResource("5_dialog")]
+
+[node name="GameMenu" parent="." instance=ExtResource("6_menu")]
