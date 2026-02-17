@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/bank.gd" id="1_script"]
+
+[node name="Bank" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -90.0
+offset_right = 120.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Panel"]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 236.0
+offset_bottom = 16.0
+text = "BANK"
+horizontal_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 236.0
+offset_bottom = 150.0
+
+[node name="HBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 154.0
+offset_right = 236.0
+offset_bottom = 174.0
+
+[node name="WithdrawBtn" type="Button" parent="Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Withdraw"
+
+[node name="CloseBtn" type="Button" parent="Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Close"

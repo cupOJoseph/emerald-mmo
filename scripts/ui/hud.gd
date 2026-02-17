@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var chat_container: VBoxContainer = $ChatContainer
 @onready var chat_input: LineEdit = $ChatContainer/ChatInput
 @onready var chat_log: RichTextLabel = $ChatContainer/ChatLog
+@onready var gold_display: Label = $GoldDisplay
 
 var chat_visible: bool = false
 
@@ -42,3 +43,6 @@ func add_chat_message(username: String, message: String) -> void:
 
 func set_map_name(map_name: String) -> void:
 	map_label.text = map_name
+
+func set_gold(amount: int) -> void:
+	gold_display.text = "Gold: %d" % amount

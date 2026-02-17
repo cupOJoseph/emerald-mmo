@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://cplayerframes01"]
+
+[ext_resource type="Texture2D" uid="uid://cplayersheet01" path="res://assets/sprites/player/player_spritesheet.png" id="1_sheet"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sheet")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

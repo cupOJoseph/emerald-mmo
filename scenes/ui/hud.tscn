@@ -35,3 +35,18 @@ scroll_following = true
 
 [node name="ChatInput" type="LineEdit" parent="ChatContainer"]
 placeholder_text = "Type a message..."
+
+[node name="GoldDisplay" type="Label" parent="."]
+offset_left = 4
+offset_top = 36
+offset_right = 150
+offset_bottom = 52
+text = "Gold: 100"
+
+[node name="HotkeyHints" type="Label" parent="."]
+offset_left = 4
+offset_top = 52
+offset_right = 200
+offset_bottom = 68
+text = "[I]nventory [B]ank [T]rade [F1]Admin"
+modulate = Color(1, 1, 1, 0.5)
