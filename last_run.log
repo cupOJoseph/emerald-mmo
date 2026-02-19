@@ -1,0 +1,55 @@
+=== Emerald MMO Launch Tue Feb 17 14:54:18 EST 2026 ===
+Working dir: /Users/lobster/.openclaw/workspace/emerald-mmo
+Godot: /opt/homebrew/bin/godot
+
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 4.1 APPLE-23.0.2 - Compatibility - Using Device: Apple Inc. - Apple Software Renderer
+
+[GameManager] Ready
+SCRIPT ERROR: Parse Error: Could not find type "DialogBox" in the current scope.
+          at: GDScript::reload (res://scripts/main.gd:5)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Could not find type "GameMenu" in the current scope.
+          at: GDScript::reload (res://scripts/main.gd:6)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+ERROR: Failed to load script "res://scripts/main.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:2907)
+   GDScript backtrace (most recent call first):
+       [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+       [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Could not find type "InteractionSystem" in the current scope.
+          at: GDScript::reload (res://scripts/player/player_controller.gd:24)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Could not find type "EmoteSystem" in the current scope.
+          at: GDScript::reload (res://scripts/player/player_controller.gd:25)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Identifier "InteractionSystem" not declared in the current scope.
+          at: GDScript::reload (res://scripts/player/player_controller.gd:44)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Identifier "EmoteSystem" not declared in the current scope.
+          at: GDScript::reload (res://scripts/player/player_controller.gd:48)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "interactable" variable because the value doesn't have a set type.
+          at: GDScript::reload (res://scripts/player/player_controller.gd:162)
+          GDScript backtrace (most recent call first):
+              [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+              [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+ERROR: Failed to load script "res://scripts/player/player_controller.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript.cpp:2907)
+   GDScript backtrace (most recent call first):
+       [0] go_to_scene (res://scripts/autoload/game_manager.gd:131)
+       [1] _on_start_pressed (res://scripts/ui/login_screen.gd:71)
+
+=== Exit code: 0 ===
